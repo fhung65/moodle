@@ -33,7 +33,7 @@ $contextid = optional_param('context', $systemcontext->id, PARAM_INT);
 // Check permissions.
 list($context, $course, $cm) = get_context_info_array($contextid);
 require_login($course, false, $cm);
-require_capability('moodle/role:manage', $context);
+require_capability('tool/capability:view', $context);
 
 // Print the header.
 admin_externalpage_setup('toolcapability');
